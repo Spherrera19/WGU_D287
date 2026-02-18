@@ -13,13 +13,13 @@ ID: 010825670
 
 File: src/main/resources/templates/mainscreen.html
 
-Line 15: Changed the title tag to "Herrera Lens & Light".
+Line 15-19: Implemented a professional "Hero" section with the shop title "Herrera Lens & Light".
 
-Line 19: Changed the main heading to "Herrera Lens & Light".
+Line 36: Updated the Part section header to "Camera Components & Accessories".
 
-Line 21: Updated the Parts header to "Camera Components & Accessories".
+Line 84: Updated the Product section header to "Professional Photography Kits".
 
-Line 55: Updated the Products header to "Professional Photography Kits".
+Note: Utilized Bootstrap card and hero-section classes to improve visual hierarchy while maintaining all required functional elements.
 
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
