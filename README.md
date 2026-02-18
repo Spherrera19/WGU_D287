@@ -10,7 +10,15 @@ ID: 010825670
 ## Requirements
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
+File: src/main/resources/templates/mainscreen.html
 
+Line 15: Changed the <title> tag to "Herrera Lens & Light".
+
+Line 19: Changed the main <h1> heading to "Herrera Lens & Light".
+
+Line 21: Updated the Parts <h2> header to "Camera Components & Accessories".
+
+Line 55: Updated the Products <h2> header to "Professional Photography Kits".
 
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
