@@ -44,9 +44,35 @@ Line 26: Added a navigation link to the "About" page within the hero section usi
 
 ### E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
-
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
+File modified: src/main/java/com/example/demo/bootstrap/BootStrapData.java
+
+Logic Detail: Used partRepository.count() == 0 and productRepository.count() == 0 within an if block to ensure data is only seeded when the H2 database is empty.
+
+Sample Parts Added:
+
+Full Frame CMOS Sensor (Inhouse)
+
+24-70mm f/2.8 Pro Lens (Outsourced - Canon)
+
+LP-E6NH Battery Pack (Inhouse)
+
+128GB SDXC V90 Memory Card (Outsourced - SanDisk)
+
+Mechanical Shutter Assembly (Inhouse)
+
+Sample Products Added:
+
+Wedding Photography Kit
+
+Content Creator Bundle
+
+Street Photo Setup
+
+Studio Lighting Suite
+
+Vlogging Starter Pack
 
 ### F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 •  The “Buy Now” button must be next to the buttons that update and delete products.
