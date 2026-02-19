@@ -84,9 +84,10 @@ public class BootStrapData implements CommandLineRunner {
             productRepository.save(new Product("Vlogging Starter Pack", 899.0, 12));
         }
 
-
         System.out.println("Started in Bootstrap");
-        System.out.println("Number of Products: " + productRepository.count());
-        System.out.println("Number of Parts: " + partRepository.count());
+        System.out.println("Number of Products "+productRepository.count());
+        System.out.println(productRepository.findAll());
+        System.out.println("Number of Parts "+partRepository.count());
+        System.out.println(partRepository.findAll());
     }
 }
