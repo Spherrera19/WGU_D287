@@ -79,6 +79,30 @@ Vlogging Starter Pack
 • The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 •  Display a message that indicates the success or failure of a purchase.
 
+File modified: src/main/resources/templates/mainscreen.html
+
+Lines 120: Added a "Buy Now" button to the product table. The button uses a dynamic link (@{/buyProduct(productID=${tempProduct.id})}) to pass the specific product ID to the controller.
+
+File modified: src/main/java/com/example/demo/controllers/AddProductController.java
+
+Lines 187 - 201: Implemented the buyProduct method.
+
+Logic Detail:
+
+Retrieves the product using productService.findById(theId).
+
+Checks if inventory > 0.
+
+If yes: Decrements inventory by 1, saves the product, and returns "purchase-success".
+
+If no: Returns "purchase-error".
+
+New Files:
+
+src/main/resources/templates/purchase-success.html: Displays a confirmation message for successful purchases.
+
+src/main/resources/templates/purchase-error.html: Displays an error message when attempting to buy an out-of-stock item.
+
 
 ### G.  Modify the parts to track maximum and minimum inventory by doing the following:
 •  Add additional fields to the part entity for maximum and minimum inventory.
