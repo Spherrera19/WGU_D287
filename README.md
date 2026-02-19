@@ -28,15 +28,19 @@ Note: Do not remove any elements that were included in the screen. You may add a
 
 File: src/main/java/com/example/demo/controllers/AboutController.java
 
-Line 1-13: Created controller and mapped /about endpoint.
+Lines 1-13: Created the controller class and used @GetMapping("/about") to map the web endpoint to the about view.
 
 File: src/main/resources/templates/about.html
 
-Lines 1-22: Created the About page content and a "Return to Shop" button.
+Lines 10-35: Refined the page with a layered UI design, using a negative margin to overlap the content area onto a photography-themed hero header.
+
+Lines 45-60: Created a brand story detailing the Herrera Lens & Light legacy in Downtown Miami and included two-column feature cards for "Pro Gear" and "Miami Local".
+
+Line 52: Implemented a "Return to Store" button using th:href="@{/mainscreen}" to fulfill the bi-directional navigation requirement.
 
 File: src/main/resources/templates/mainscreen.html
 
-Line 29: Added a link to navigate to the new About page.
+Line 26: Added a navigation link to the "About" page within the hero section using th:href="@{/about}".
 
 ### E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
