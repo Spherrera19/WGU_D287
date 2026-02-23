@@ -137,3 +137,8 @@ Files modified:
 src/test/java/com/example/demo/domain/PartTest.java: Added getMin(), setMin(), getMax(), and setMax() test methods to verify that the new inventory boundary fields function correctly within the Part entity.
 
 ### J.  Remove the class files for any unused validators in order to clean your code.
+Files modified:
+
+src/main/java/com/example/demo/validators/DeletePartValidator.java: Deleted file.
+
+src/main/java/com/example/demo/validators/ValidDeletePart.java: Deleted file.
