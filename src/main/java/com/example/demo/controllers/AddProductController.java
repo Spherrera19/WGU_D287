@@ -219,37 +219,42 @@ public class AddProductController {
         sensor.setName("Full Frame CMOS Sensor");
         sensor.setPrice(450.0);
         sensor.setInv(10);
-        sensor.setId(101);
+        sensor.setMin(2);
+        sensor.setMax(50);
         partRepository.save(sensor);
 
         OutsourcedPart lens = new OutsourcedPart();
         lens.setName("24-70mm f/2.8 Pro Lens");
         lens.setPrice(1200.0);
         lens.setInv(5);
+        lens.setMin(1);
+        lens.setMax(20);
         lens.setCompanyName("Canon");
-        lens.setId(102);
         partRepository.save(lens);
 
         InhousePart battery = new InhousePart();
         battery.setName("LP-E6NH Battery Pack");
         battery.setPrice(79.0);
         battery.setInv(25);
-        battery.setId(103);
+        battery.setMin(5);
+        battery.setMax(100);
         partRepository.save(battery);
 
         OutsourcedPart card = new OutsourcedPart();
         card.setName("128GB SDXC V90 Memory Card");
         card.setPrice(115.0);
         card.setInv(40);
+        card.setMin(10);
+        card.setMax(200);
         card.setCompanyName("SanDisk");
-        card.setId(104);
         partRepository.save(card);
 
         InhousePart shutter = new InhousePart();
         shutter.setName("Mechanical Shutter Assembly");
         shutter.setPrice(210.0);
         shutter.setInv(15);
-        shutter.setId(105);
+        shutter.setMin(2);
+        shutter.setMax(30);
         partRepository.save(shutter);
 
         // 3. RE-POPULATE 5 PRODUCTS

@@ -124,6 +124,11 @@ src/main/resources/templates/OutsourcedPartForm.html: Added labeled text input f
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+Files modified:
+
+src/main/java/com/example/demo/controllers/AddInhousePartController.java: Added conditional logic to the submitForm method to check if inventory < min, inventory > max, or min > max. Used bindingResult.rejectValue to send custom error messages back to the UI.
+
+src/main/java/com/example/demo/controllers/AddOutsourcedPartController.java: Implemented the identical validation logic in the submitForm method to ensure outsourced parts adhere to the same inventory rules.
 
 
 ### I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
