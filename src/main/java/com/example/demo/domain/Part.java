@@ -9,10 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
- *
- *
- *
+ * Represents a generic Part in the inventory system.
  */
 @Entity
 @ValidDeletePart
@@ -23,11 +20,21 @@ public abstract class Part implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
+
     String name;
+
     @Min(value = 0, message = "Price value must be positive")
     double price;
+
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
+
+    // PART G: Min and Max fields grouped with the other columns
+    @Min(value = 0, message = "Minimum inventory value must be positive")
+    int min;
+
+    @Min(value = 0, message = "Maximum inventory value must be positive")
+    int max;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
@@ -82,6 +89,22 @@ public abstract class Part implements Serializable {
         this.inv = inv;
     }
 
+    public int getMin() {
+        return min;
+    }
+
+    public void setMin(int min) {
+        this.min = min;
+    }
+
+    public int getMax() {
+        return max;
+    }
+
+    public void setMax(int max) {
+        this.max = max;
+    }
+
     public Set<Product> getProducts() {
         return products;
     }
@@ -93,6 +116,7 @@ public abstract class Part implements Serializable {
     public String toString(){
         return this.name;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
