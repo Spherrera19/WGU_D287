@@ -132,6 +132,8 @@ src/main/java/com/example/demo/controllers/AddOutsourcedPartController.java: Imp
 
 
 ### I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+Files modified:
 
+src/test/java/com/example/demo/domain/PartTest.java: Added getMin(), setMin(), getMax(), and setMax() test methods to verify that the new inventory boundary fields function correctly within the Part entity.
 
 ### J.  Remove the class files for any unused validators in order to clean your code.
