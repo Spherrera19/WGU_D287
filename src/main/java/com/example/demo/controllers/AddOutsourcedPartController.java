@@ -40,6 +40,25 @@ public class AddOutsourcedPartController {
     @PostMapping("/showFormAddOutPart")
     public String submitForm(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart part, BindingResult bindingResult, Model theModel){
         theModel.addAttribute("outsourcedpart",part);
+
+        // PART G: MIN/MAX INVENTORY VALIDATION LOGIC
+        // ==========================================
+
+        // 1. Ensure Min is not greater than Max
+        if (part.getMin() > part.getMax()) {
+            bindingResult.rejectValue("min", "error.min", "Minimum inventory cannot be greater than Maximum.");
+        }
+        // 2. Ensure Inventory is not less than Min
+        if (part.getInv() < part.getMin()) {
+            bindingResult.rejectValue("inv", "error.inv", "Inventory cannot be lower than Minimum.");
+        }
+        // 3. Ensure Inventory is not greater than Max
+        if (part.getInv() > part.getMax()) {
+            bindingResult.rejectValue("inv", "error.inv", "Inventory cannot be higher than Maximum.");
+        }
+
+        // ==========================================
+
         if(bindingResult.hasErrors()){
             return "OutsourcedPartForm";
         }

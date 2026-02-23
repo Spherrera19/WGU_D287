@@ -111,6 +111,14 @@ src/main/resources/templates/purchase-error.html: Displays an error message when
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
+src/main/java/com/example/demo/domain/Part.java: Added min and max integer fields with validation annotations. Added corresponding getters and setters.
+
+src/main/java/com/example/demo/bootstrap/BootStrapData.java: Updated the sample inventory creation script to include min and max values for all 5 default parts to prevent database constraint errors.
+
+src/main/resources/templates/InhousePartForm.html: Added labeled text input fields for Minimum and Maximum inventory. Added Thymeleaf spans to display validation errors.
+
+src/main/resources/templates/OutsourcedPartForm.html: Added labeled text input fields for Minimum and Maximum inventory. Added Thymeleaf spans to display validation errors.
+
 
 ### H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
